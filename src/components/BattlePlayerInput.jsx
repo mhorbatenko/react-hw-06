@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 
 
 
-const BattlePlayerInput = ({id, label, handlePlayerSubmit}) => {
+const BattlePlayerInput = memo(({id, label, handlePlayerSubmit}) => {
 
     const [userName, setUserName] = useState('')
 
@@ -26,6 +26,6 @@ const BattlePlayerInput = ({id, label, handlePlayerSubmit}) => {
             <button className="button" disabled={!userName.length}>Submit</button>
         </form>
     )
-}
+})
 
 export default BattlePlayerInput;

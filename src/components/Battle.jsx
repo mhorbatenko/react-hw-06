@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import BattlePlayerInput from './BattlePlayerInput'
 
 import BattlePlayerPreview from "./BattlePlayerPreview";
@@ -14,7 +14,7 @@ const Battle = () => {
         battlePlayerTwoImage: null
     })
 
-    const handleBattlePlayerSubmit = (id, userName) => {
+    const handleBattlePlayerSubmit = useCallback((id, userName) => {
 
         setBattlePlayerData(
             (prevState) => (
@@ -25,11 +25,10 @@ const Battle = () => {
                 }
         )
         )
-    }
+    }, [])
 
 
     const handleReset = (id) => {
-        console.log('id', id)
         setBattlePlayerData(
             (prevState) => (
                 {
@@ -39,7 +38,6 @@ const Battle = () => {
                 }
             )
         )
-        console.log('render', battlePlayerData)
     }
 
 
@@ -76,7 +74,13 @@ const Battle = () => {
             {
                 battlePlayerData.battlePlayerOneImage &&
                     battlePlayerData.battlePlayerTwoImage ?
-                        <Link to='/' className='button'>Battle</Link>
+                        <Link to={
+                            {
+                                pathname: '/battle/results',
+                                search: `battlePlayerOneName=${battlePlayerData.battlePlayerOneName}&battlePlayerTwoName=${battlePlayerData.battlePlayerTwoName}`
+                            }
+                        }
+                        className='button'>Battle</Link>
                 : null
             }
         </div>

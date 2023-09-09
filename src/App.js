@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Popular from './components/Popular'
 import Battle from "./components/Battle";
 import Layout from "./components/Layout";
+import Results from "./components/Results";
 import './index.css'
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: '/battle',
         element: <Battle />
+      },
+      {
+        path: '/battle/results',
+        element: <Results />
       },
     ]
   }
