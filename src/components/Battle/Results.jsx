@@ -1,10 +1,10 @@
 
-import { makeUserBattle } from "./api";
+import { makeUserBattle } from "../api";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-import Player from "./Player";
-import Loading from "./Loading";
+import Player from "../Player/Player";
+import Loading from "../Loading";
 
 const Results = () => {
     const location = useLocation()

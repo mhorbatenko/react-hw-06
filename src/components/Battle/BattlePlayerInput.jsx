@@ -1,14 +1,12 @@
 import { useState, memo } from "react";
 
 
-
 const BattlePlayerInput = memo(({id, label, handlePlayerSubmit}) => {
 
     const [userName, setUserName] = useState('')
 
     const handleBattlePlayerSubmit = (event) => {
         event.preventDefault()
-        console.log(userName)
         handlePlayerSubmit(id, userName)
     }
 

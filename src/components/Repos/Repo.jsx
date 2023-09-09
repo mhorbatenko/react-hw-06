@@ -1,5 +1,5 @@
 
-import Star from "../static/star"
+import Star from "../../static/star"
 
 
 const Repo = ({id, index, avatar_url, login, stargazers_count, name, html_url}) => {

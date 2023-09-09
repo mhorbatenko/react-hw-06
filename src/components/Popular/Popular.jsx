@@ -1,10 +1,10 @@
 
 import { useEffect, useState } from "react"
-import { getLanguagePopularRepos } from "./api"
+import { getLanguagePopularRepos } from "../api"
 import { useSearchParams } from "react-router-dom";
 
-import Repos from "./Repos"
-import Loading from "./Loading"
+import Repos from "../Repos/Repos"
+import Loading from "../Loading"
 
 const languages = ['all', 'javascript', 'python', 'java', 'c', 'go']
 

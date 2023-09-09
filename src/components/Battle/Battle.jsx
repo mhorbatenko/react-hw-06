@@ -1,9 +1,11 @@
 
 import { useCallback, useState } from 'react';
-import BattlePlayerInput from './BattlePlayerInput'
+import BattlePlayerInput from './BattlePlayerInput';
 
 import BattlePlayerPreview from "./BattlePlayerPreview";
 import { Link } from 'react-router-dom';
+
+import BattleImage from '../../static/battle';
 
 const Battle = () => {
 
@@ -57,6 +59,7 @@ const Battle = () => {
                         handlePlayerSubmit={handleBattlePlayerSubmit}
                     />
                 }
+                <img src={BattleImage}></img>
                 {battlePlayerData.battlePlayerTwoImage ?
                 <BattlePlayerPreview
                     avatar={battlePlayerData.battlePlayerTwoImage}

@@ -1,5 +1,5 @@
 
-import BattlePlayerPreview from "./BattlePlayerPreview"
+import BattlePlayerPreview from "../Battle/BattlePlayerPreview"
 
 const Player = ({label, score, profile}) => {
     return (
