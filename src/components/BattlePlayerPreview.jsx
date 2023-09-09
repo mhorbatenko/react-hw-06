@@ -1,9 +1,12 @@
 
-const BattlePlayerPreview = ({avatar, userName}) => {
+const BattlePlayerPreview = ({avatar, userName, children}) => {
     return (
-        <div className="column">
-            <img className="avatar" src={avatar} alt='battle player avatar'/>
-            <h2 className="username">@{userName}</h2>
+        <div>
+            <div className="column">
+                <img className="avatar" src={avatar} alt='battle player avatar'/>
+                <h2 className="username">@{userName}</h2>
+            </div>
+            {children}
         </div>
     )
 }
